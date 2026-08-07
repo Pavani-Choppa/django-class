@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Registration Form</title>
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing:border-box;
+                font-family:'Poppins',sans-serif;
+            }
+
+            body{
+                background:#f2f2f2;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                min-height:100vh;
+            }
+
+            .container{
+                width:450px;
+                background:#fff;
+                padding:30px 35px;
+                border-radius:8px;
+                box-shadow:0 5px 15px rgba(0,0,0,0.2);
+            }
+
+            .container h2{
+                text-align:center;
+                color:#233b8b;
+                margin-bottom:30px;
+                font-size:24px;
+                font-weight:600;
+            }
+
+            .form-group{
+                display:flex;
+                align-items:center;
+                margin-bottom:18px;
+            }
+
+            .form-group label{
+                width:120px;
+                font-size:14px;
+                color:#333;
+            }
+
+            .form-group input,
+            .form-group select{
+                flex:1;
+                padding:8px 10px;
+                border:1px solid #ccc;
+                border-radius:3px;
+                outline:none;
+                font-size:13px;
+            }
+
+            .form-group input:focus,
+            .form-group select:focus{
+                border-color:#0d6efd;
+            }
+
+            .skills{
+                display:flex;
+                gap:18px;
+                align-items:center;
+                flex-wrap:wrap;
+            }
+
+            .skills label{
+                width:auto;
+                display:flex;
+                align-items:center;
+                gap:5px;
+                font-size:13px;
+            }
+
+            .btn{
+                text-align:center;
+                margin-top:25px;
+            }
+
+            button{
+                background:green;
+                color:white;
+                border:none;
+                padding:10px 35px;
+                border-radius:4px;
+                cursor:pointer;
+                font-size:14px;
+                font-weight:500;
+            }
+
+            button:hover{
+                background:#056b05;
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <div class="container">
+
+            <h2>Student Registration Form</h2>
+
+            <form method="post" action="display/">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" name="name" placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label>Age</label>
+                    <input type="number" name="age" placeholder="Enter your age">
+                </div>
+
+                <div class="form-group">
+                    <label>Place</label>
+                    <input type="text" name="place" placeholder="Enter your place">
+                </div>
+
+                <div class="form-group">
+                    <label>Mobile</label>
+                    <input type="tel" name="mobile" placeholder="Enter 10-digit mobile number">
+                </div>
+
+                <div class="form-group">
+                    <label>Blood Group</label>
+
+                    <select name="blood_group">
+                        <option value="" selected disabled>--Select Blood Group--</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Skills</label>
+
+                    <div class="skills">
+
+                        <label>
+                            <input type="checkbox" name="skills" value="Python">
+                            Python
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="skills" value="ML">
+                            ML
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="skills" value="Django">
+                            Django
+                        </label>
+
+                    </div>
+                </div>
+
+                <div class="btn">
+                    <button type="submit">Submit</button>
+                </div>
+
+            </form>
+
+        </div>
+    </body>
+</html>

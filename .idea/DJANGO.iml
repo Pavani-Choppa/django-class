@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/practiceproject1" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/practiceproject2" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/DTLProject" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ThirdProject" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/envpalle" />
     </content>
     <orderEntry type="jdk" jdkName="D:\SELF\PALLE\DJANGO\envpalle" jdkType="Python SDK" />
