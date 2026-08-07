@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 520px;
+            background: #ffffff;
+            padding: 30px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #555;
+            font-weight: 600;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            width: 100px;
+            font-size: 20px;
+            color: #555;
+        }
+
+        .form-group input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #c9b77c;
+            background: #fff8dc;
+            font-size: 20px;
+            text-align: center;
+            outline: none;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        button {
+            width: 120px;
+            padding: 12px;
+            border: none;
+            background: #2d7d1f;
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #1f6314;
+        }
+
+        .result {
+            margin-top: 18px;
+            background: #6fae45;
+            color: black;
+            text-align: center;
+            padding: 12px;
+            font-size: 22px;
+            font-weight: 500;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Simple Calculator</h2>
+
+        <form  method="post">
+
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label>Num1:</label>
+                <input type="number" name="num1" placeholder="Enter First Number" value="{{ num1 }}">
+            </div>
+
+            <div class="form-group">
+                <label>Num2:</label>
+                <input type="number" name="num2" placeholder="Enter Second Number" value="{{ num2 }}">
+            </div>
+
+            <div class="buttons">
+                <button type="submit" name="operation" value="add">
+                    Add
+                </button>
+
+                <button type="submit" name="operation" value="mul">
+                    Mul
+                </button>
+
+                    <button type="submit" name="operation" value="power">
+                    Power
+                </button>
+            </div>
+
+            <div class="result">
+                {{ res }}
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
