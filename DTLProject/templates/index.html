@@ -1,0 +1,26 @@
+
+
+<!DOCTYPE html>
+{% load mathfilters %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Heloooooo</h1>
+    <h3>The Give Numbers Are : </h3>
+    <p><b> X : </b>{{n1}}</p>
+    <p><b> Y : </b>{{n2}}</p>
+    <h3>Operators : </h3>
+    <p><b> Sum of 2 Numbers are : </b>{{n1|add:n2}}</p>
+    <p><b> Subtraction of {{n2}} - {{n1}} Numbers are : </b>{{n2|sub:n1}}</p>
+    <p><b> Multiplication of  {{n2}} and {{n1}} Numbers are : </b>{{n2|mul:n1}}</p>
+    <p><b> Division of {{n2}} and {{n1}} Numbers are : </b>{{n2|div:n1}}</p>
+    <p><b> Modulo of {{n2}} and {{n1}} Numbers are : </b>{{n2|mod:n1}}</p>
+<!--    <h3>The List Elements Are : </h3>-->
+<!--    <p>{{sn}}</p>-->
+<!--    <p><b> Y : </b>{{n2}}</p>-->
+
+</body>
+</html>
