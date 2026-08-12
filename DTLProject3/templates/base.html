@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+{% load custom_tags %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Welcome to Cutsom List</h1>
+    {% make_upper name %}<br/><br/>
+    {% greet "Pavani" %}<br/><br/>
+    {% custsom_tag_fun %}<br/><br/>
+    sum of {{n1}} and {{n2}} is {% add_fun n1 n2 %}<br/><br/>
+    Sum of all numbers in list is {{ numbers|list_sum }}<br/><br/>
+    Sum of all EVen Index numbers in list is {{ numbers|even_index_sum }}
+</body>
+</html>
