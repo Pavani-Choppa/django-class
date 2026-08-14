@@ -5,4 +5,4 @@ class Student(models.Model):
     name = models.CharField(max_length = 100)
     age = models.IntegerField()
     place = models.CharField(max_length = 100)
-    name = models.EmailField(max_length = 255)
+    email = models.EmailField(max_length = 255,unique=True,default = "Unkonwn")
